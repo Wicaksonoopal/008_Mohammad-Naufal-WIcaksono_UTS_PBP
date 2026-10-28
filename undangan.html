@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation</title>
+    <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <audio id="musik" src="assets/peak.mp3" loop preload="auto"></audio>
+        <button id="btn-musik" type="button" class="btn-musik d-none" aria-label="Matikan suara">
+        <span class="icon-musik" aria-hidden="true"></span>
+    </button>
+
+  <section id="cover" class="halaman min-vh-100 d-flex align-items-center justify-content-center text-center">
+    <video class="cover-video" src="assets/cover.mp4" autoplay muted loop playsinline></video>
+    <img  class="sees" src="assets/sees.svg" alt="sees_logo">
+    <div class="container">
+        <p class="mb-2">Undangan Pernikahan</p>
+        <h1>Makoto &amp; Yukari</h1>
+
+        <p class="mt-5 mb-1">Kepada Yth.</p>
+        <h2 class="guest">Tamu Undangan</h2>
+
+        <button id="btn-open" type="button" class="btn btn-open mt-4">Buka Undangan</button>
+    </div>
+  </section>
+
+  <main>
+
+    <section id="mempelai" class="halaman text-center d-none">
+      <video class="mempelai-video" src="assets/yukari.mp4" autoplay muted loop playsinline></video>
+
+    <button id="btn-cover" type="button" class="btn btn-open btn-back">
+    <img src="assets/back.svg" alt="">
+    <span>Kembali</span>
+   </button>
+      <div class="container">
+        <p class="mb-2">Dengan Rahmat Tuhan Yang Maha Esa</p>
+        <h2 class="section-title">Akan Dilaksanakan Pernikahan Mempelai</h2>
+
+        <div class="row g-4 justify-content-center">
+
+          <div class="col-12 col-md-5">
+            <div class="mempelai-card">
+              <img src="assets/mempelai-pria.jpg" alt="Mempelai pria" class="mempelai-foto">
+              <h3 class="mempelai-nama">Yuki Makoto</h3>
+              <p class="mempelai-ortu">Putra dari Bapak Igor &amp; Ibu Elizabeth</p>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-5">
+            <div class="mempelai-card">
+              <img src="assets/mempelai-wanita.jpg" alt="Mempelai wanita" class="mempelai-foto">
+              <h3 class="mempelai-nama">Takeba Yukari</h3>
+              <p class="mempelai-ortu">Putri dari Bapak Eiichiro &amp; Ibu Isako</p>
+            </div>
+          </div>
+
+        </div>
+        <button id="btn-acara" type="button" class="btn btn-open mt-3">Detail Acara</button>
+      </div>
+    </section>
+
+    <section id="acara" class="halaman text-center d-none">
+      <video class="acara-video" src="assets/makoto.mp4" autoplay muted loop playsinline></video>
+      <div class="container">
+        <p class="mb-2">Save the Date</p>
+        <h2 class="section-title">Hari Bahagia</h2>
+
+        <div class="row g-3 justify-content-center mb-3">
+          <div class="col-3 col-md-2"><div class="count-box"><span 
+            id="cd-hari" class="count-num">0</span><span class="count-label">Hari</span></div></div>
+          <div class="col-3 col-md-2"><div class="count-box"><span 
+            id="cd-jam" class="count-num">0</span><span class="count-label">Jam</span></div></div>
+          <div class="col-3 col-md-2"><div class="count-box"><span 
+            id="cd-menit" class="count-num">0</span><span class="count-label">Menit</span></div></div>
+          <div class="col-3 col-md-2"><div class="count-box"><span 
+            id="cd-detik" class="count-num">0</span><span class="count-label">Detik</span></div></div>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-6">
+            <div class="acara-card">
+              <h3>Akad Nikah & Resepsi</h3>
+              <p class="acara-waktu">Jumat, 30 Oktober 2026<br>15.00 WIB s/d Selesai</p>
+              <p>Aula Graha Adyatama<br>SMA Negeri 2 Nganjuk</p>
+              <a href="https://maps.app.goo.gl/Z48GdDArWiMpKMor6" target="_blank" rel="noopener" class="btn btn-open mt-2">Lihat Lokasi</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-center gap-3 mt-3">
+         <button id="btn-kembali" type="button" class="btn btn-open">Kembali</button>
+         <button id="btn-rsvp" type="button" class="btn btn-open">RSVP</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="rsvp" class="halaman text-center d-none">
+      <video class="rsvp-video" src="assets/both.mp4" autoplay muted loop playsinline></video>
+        <button id="btn-rsvp-kembali" type="button" class="btn btn-open btn-back">
+            <img src="assets/back.svg" alt="">
+            <span>Kembali</span>
+        </button>
+
+        <div class="container">
+            <p class="mb-2">Konfirmasi Kehadiran</p>
+            <h2 class="section-title">RSVP</h2>
+
+            <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+                <form id="form-rsvp" class="rsvp-card text-start">
+
+                <label for="rsvp-nama" class="rsvp-label">Nama</label>
+                <input id="rsvp-nama" type="text" class="rsvp-input" required>
+
+                <span class="rsvp-label">Konfirmasi Kehadiran</span>
+                <div class="rsvp-pilihan">
+                    <input type="radio" name="hadir" id="hadir-ya" value="Hadir" checked>
+                    <label for="hadir-ya">Hadir</label>
+                    <input type="radio" name="hadir" id="hadir-tidak" value="Tidak Hadir">
+                    <label for="hadir-tidak">Tidak Hadir</label>
+                </div>
+
+                <label for="rsvp-ucapan" class="rsvp-label">Ucapan</label>
+                <textarea id="rsvp-ucapan" rows="4" class="rsvp-input" required></textarea>
+
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn btn-open">Kirim</button>
+                </div>
+                </form>
+            </div>
+            </div>
+        </div>
+        </section>
+
+        <section id="terimakasih" class="halaman text-center d-none">
+           <video class="terimakasih-video" src="assets/tengkyu.mp4" autoplay muted loop playsinline></video>
+        <div class="container">
+            <p class="mb-2">RSVP Terkirim</p>
+            <h2 class="section-title">Terima Kasih</h2>
+            <p class="terima-teks">Terima kasih telah melakukan RSVP.<br>Kami menantikan kehadiran Anda.</p>
+            <button id="btn-ke-cover" type="button" class="btn btn-open mt-3">Kembali ke Cover</button>
+        </div>
+    </section>
+
+  </main>
+
+  <div id="transisi" class="d-none"></div>
+
+  <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
